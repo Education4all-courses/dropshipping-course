@@ -1,154 +1,149 @@
-/* Beautiful Gradient Background */
+/* General Styles */
 body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    font-family: 'Noto Nastaliq Urdu', 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1e1e2f, #121221);
+    color: #ffffff;
+    text-align: center;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    overflow-x: hidden;
 }
 
-/* Container with Glassmorphism */
+/* Background Animation */
+body::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.1), transparent);
+    animation: backgroundGlow 8s infinite alternate ease-in-out;
+}
+
+@keyframes backgroundGlow {
+    0% { filter: brightness(100%); }
+    100% { filter: brightness(120%); }
+}
+
+/* Glassmorphism Container */
 .container {
-    width: 90%;
     max-width: 700px;
-    background: rgba(255, 255, 255, 0.2);
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(40, 41, 61, 0.85);
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
-    text-align: center;
-    color: white;
+    animation: fadeIn 1.5s ease-in-out;
 }
 
-/* Header */
-header {
-    text-align: center;
-    margin-bottom: 20px;
+/* Fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Heading & Text Styling */
+h1, h2, p {
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.2);
 }
 
 h1 {
     font-size: 28px;
-    font-weight: 700;
+    font-weight: bold;
+    animation: glowText 2s infinite alternate ease-in-out;
 }
 
-/* Urdu & English Styling */
-.ur, .en {
-    width: 100%;
+@keyframes glowText {
+    0% { text-shadow: 0 0 10px #ff9500, 0 0 20px #ff9500; }
+    100% { text-shadow: 0 0 20px #ff6500, 0 0 30px #ff6500; }
 }
 
-.ur {
-    direction: rtl;
-    text-align: right;
-    font-family: 'Noto Nastaliq Urdu', serif;
-}
-
-.en {
-    direction: ltr;
-    text-align: left;
-    font-family: 'Poppins', sans-serif;
-}
-
-/* Toggle Language Button */
-#toggleLanguage {
-    background: #f8d90f;
-    color: #222;
-    padding: 12px 18px;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    cursor: pointer;
-    margin-top: 10px;
-}
-
-#toggleLanguage:hover {
-    background: #f3c905;
+.subtitle {
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 20px;
 }
 
 /* Video Section */
-.video-container {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
-}
-
-.video-container iframe {
+.video-section iframe {
     width: 100%;
     height: 350px;
-    border-radius: 8px;
-    border: none;
-}
-
-/* Course Access Section */
-.access {
-    background: rgba(255, 255, 255, 0.3);
-    padding: 20px;
     border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
 }
 
-button {
-    padding: 14px 22px;
+/* Access Section */
+.access-section {
+    margin-top: 30px;
+}
+
+/* Buttons */
+button, .btn {
+    background: linear-gradient(45deg, #ff9500, #ff6500);
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
     font-size: 16px;
     cursor: pointer;
-    background: #ff3e3e;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(255, 150, 0, 0.8);
+}
+
+button:hover, .btn:hover {
+    background: linear-gradient(45deg, #ff6500, #ff4500);
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 100, 0, 1);
+}
+
+/* Neon Button Effect */
+@keyframes pulseGlow {
+    0% { box-shadow: 0 0 10px rgba(255, 150, 0, 0.8); }
+    100% { box-shadow: 0 0 20px rgba(255, 100, 0, 1); }
+}
+
+button, .btn {
+    animation: pulseGlow 1.5s infinite alternate ease-in-out;
+}
+
+/* Language Toggle Button */
+#toggleLanguage {
+    margin: 10px;
+    padding: 10px 20px;
+    background: #007bff;
     color: white;
     border: none;
-    border-radius: 8px;
-    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
     transition: 0.3s;
 }
 
-button:hover {
-    background: #e63131;
+#toggleLanguage:hover {
+    background: #0056b3;
+    transform: scale(1.05);
 }
 
-/* Full Course Access */
-#fullCourse {
-    background: rgba(255, 255, 255, 0.4);
-    padding: 20px;
-    border-radius: 8px;
+/* Urdu RTL Styling */
+.ur {
+    direction: rtl;
+    text-align: right;
+    font-family: 'Noto Nastaliq Urdu', sans-serif;
+}
+
+/* Hidden Elements */
+.hidden {
     display: none;
-}
-
-.btn {
-    display: block;
-    padding: 12px 20px;
-    margin-top: 10px;
-    background: #f8d90f;
-    color: #222;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.btn:hover {
-    background: #f3c905;
 }
 
 /* Footer */
 footer {
-    margin-top: 30px;
-    font-size: 14px;
-}
-
-/* Mobile Responsive */
-@media (max-width: 768px) {
-    .container {
-        max-width: 95%;
-    }
-
-    .video-container iframe {
-        height: 250px;
-    }
-
-    button {
-        width: 100%;
-    }
-}
-
-/* Hide elements */
-.hidden {
-    display: none;
+    margin-top: 20px;
+    font-size: 12px;
+    opacity: 0.8;
+    animation: fadeIn 2s ease-in-out;
 }
