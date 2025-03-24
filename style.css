@@ -1,7 +1,7 @@
-/* Base Styling */
+/* Beautiful Gradient Background */
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #f9f9f9;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
     margin: 0;
     padding: 0;
     display: flex;
@@ -10,14 +10,17 @@ body {
     min-height: 100vh;
 }
 
+/* Container with Glassmorphism */
 .container {
     width: 90%;
     max-width: 700px;
-    background: white;
+    background: rgba(255, 255, 255, 0.2);
     padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
     text-align: center;
+    color: white;
 }
 
 /* Header */
@@ -27,9 +30,8 @@ header {
 }
 
 h1 {
-    font-size: 26px;
-    font-weight: 600;
-    color: #222;
+    font-size: 28px;
+    font-weight: 700;
 }
 
 /* Urdu & English Styling */
@@ -51,17 +53,18 @@ h1 {
 
 /* Toggle Language Button */
 #toggleLanguage {
-    background: #007bff;
-    color: white;
-    padding: 10px 15px;
+    background: #f8d90f;
+    color: #222;
+    padding: 12px 18px;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
+    font-size: 16px;
     cursor: pointer;
     margin-top: 10px;
 }
 
 #toggleLanguage:hover {
-    background: #0056b3;
+    background: #f3c905;
 }
 
 /* Video Section */
@@ -80,32 +83,30 @@ h1 {
 
 /* Course Access Section */
 .access {
-    background: #f8f9fa;
+    background: rgba(255, 255, 255, 0.3);
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 10px;
 }
 
 button {
-    padding: 12px 20px;
+    padding: 14px 22px;
     font-size: 16px;
-    font-weight: 500;
     cursor: pointer;
-    background-color: #28a745;
+    background: #ff3e3e;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     margin-top: 10px;
-    display: inline-block;
-    transition: all 0.3s ease;
+    transition: 0.3s;
 }
 
 button:hover {
-    background-color: #218838;
+    background: #e63131;
 }
 
 /* Full Course Access */
 #fullCourse {
-    background: #fff3cd;
+    background: rgba(255, 255, 255, 0.4);
     padding: 20px;
     border-radius: 8px;
     display: none;
@@ -113,25 +114,23 @@ button:hover {
 
 .btn {
     display: block;
-    text-align: center;
     padding: 12px 20px;
     margin-top: 10px;
-    background-color: #17a2b8;
-    color: white;
-    border-radius: 5px;
+    background: #f8d90f;
+    color: #222;
+    border-radius: 8px;
     text-decoration: none;
-    transition: all 0.3s ease;
+    font-weight: 600;
 }
 
 .btn:hover {
-    background-color: #117a8b;
+    background: #f3c905;
 }
 
 /* Footer */
 footer {
     margin-top: 30px;
     font-size: 14px;
-    color: gray;
 }
 
 /* Mobile Responsive */
