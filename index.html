@@ -5,18 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopify Dropshipping Course</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Welcome to My Shopify Dropshipping Course</h1>
-    
-    <h2>Watch the Free Demo Lesson</h2>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_DEMO_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
-    
-    <h2>Get Full Access</h2>
-    <p>To access the full course, send payment to:</p>
-    <p><strong>Bank Account:</strong> 123456789</p>
-    <p>After payment, send a screenshot to <strong>your-email@example.com</strong> or WhatsApp: <strong>+1234567890</strong></p>
-    
-    <footer>© 2024 Your Name</footer>
+    <div class="container">
+        <h1>🚀 Shopify Dropshipping Course</h1>
+        <p class="subtitle">Learn how to build a successful Shopify store from scratch!</p>
+
+        <div class="video-section">
+            <h2>🎥 Watch the Free Demo Lesson</h2>
+            <iframe src="https://drive.google.com/file/d/YOUR_DEMO_VIDEO_ID/preview" allowfullscreen></iframe>
+        </div>
+
+        <div class="access-section">
+            <h2>📚 Get Full Access</h2>
+            <p>To access the full course, send payment to:</p>
+            <p><strong>Bank Account:</strong> 123456789</p>
+            <p>After payment, send a screenshot to:</p>
+            <p><strong>Email:</strong> <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+            <p><strong>WhatsApp:</strong> <a href="https://wa.me/1234567890" target="_blank">+1234567890</a></p>
+            <button id="accessButton">Already Paid? Access Course</button>
+        </div>
+
+        <div id="fullCourse" class="hidden">
+            <h2>🎓 Full Course Content</h2>
+            <p>Click below to watch the full course:</p>
+            <a href="https://drive.google.com/drive/folders/YOUR_COURSE_FOLDER_ID" target="_blank" class="btn">Access Full Course</a>
+        </div>
+
+        <footer>© 2024 Your Name | All Rights Reserved</footer>
+    </div>
+
+    <script>
+        document.getElementById("accessButton").addEventListener("click", function() {
+            let password = prompt("Enter Access Code:");
+            if (password === "YOUR_SECRET_CODE") {
+                document.getElementById("fullCourse").classList.remove("hidden");
+            } else {
+                alert("Incorrect code. Please check your payment confirmation message.");
+            }
+        });
+    </script>
 </body>
 </html>
