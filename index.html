@@ -1,49 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ur">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopify Dropshipping Course</title>
+    <title>شاپیفائی ڈراپ شپنگ کورس</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <h1>🚀 Shopify Dropshipping Course</h1>
-        <p class="subtitle">Learn how to build a successful Shopify store from scratch!</p>
+        <!-- Language Switch Button -->
+        <button id="toggleLanguage">English / اردو</button>
+
+        <h1 class="ur">🚀 شاپیفائی ڈراپ شپنگ کورس</h1>
+        <h1 class="en hidden">🚀 Shopify Dropshipping Course</h1>
+
+        <p class="subtitle ur">سیکھیں کہ کیسے ایک کامیاب شاپیفائی سٹور بنائیں!</p>
+        <p class="subtitle en hidden">Learn how to build a successful Shopify store from scratch!</p>
 
         <div class="video-section">
-            <h2>🎥 Watch the Free Demo Lesson</h2>
-            <iframe src="https://drive.google.com/file/d/16-uDSVsAClBsXpprmudAejlcaDtN-zxv/view?usp=sharing" allowfullscreen></iframe>
+            <h2 class="ur">🎥 مفت ڈیمو ویڈیو دیکھیں</h2>
+            <h2 class="en hidden">🎥 Watch the Free Demo Lesson</h2>
+            <iframe src="https://drive.google.com/file/d/YOUR_DEMO_VIDEO_ID/preview" allowfullscreen></iframe>
         </div>
 
         <div class="access-section">
-            <h2>📚 Get Full Access</h2>
-            <p>To access the full course, send payment to:</p>
-            <p><strong>Bank Account:</strong> 123456789</p>
-            <p>After payment, send a screenshot to:</p>
-            <p><strong>Email:</strong> <a href="mailto:your-email@example.com">your-email@example.com</a></p>
-            <p><strong>WhatsApp:</strong> <a href="https://wa.me/1234567890" target="_blank">+1234567890</a></p>
-            <button id="accessButton">Already Paid? Access Course</button>
+            <h2 class="ur">📚 مکمل رسائی حاصل کریں</h2>
+            <h2 class="en hidden">📚 Get Full Access</h2>
+
+            <p class="ur">مکمل کورس تک رسائی کے لیے ادائیگی بھیجیں:</p>
+            <p class="en hidden">To access the full course, send payment to:</p>
+
+            <p><strong>بینک اکاؤنٹ:</strong> 123456789</p>
+
+            <p class="ur">ادائیگی کے بعد اسکرین شاٹ بھیجیں:</p>
+            <p class="en hidden">After payment, send a screenshot to:</p>
+
+            <p><strong>ای میل:</strong> <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+            <p><strong>واٹس ایپ:</strong> <a href="https://wa.me/1234567890" target="_blank">+1234567890</a></p>
+
+            <button id="accessButtonUrdu" class="ur">کیا آپ نے پہلے ہی ادائیگی کر دی؟ مکمل کورس تک رسائی حاصل کریں</button>
+            <button id="accessButton" class="en hidden">Already Paid? Access Course</button>
         </div>
 
         <div id="fullCourse" class="hidden">
-            <h2>🎓 Full Course Content</h2>
-            <p>Click below to watch the full course:</p>
-            <a href="https://drive.google.com/drive/folders/YOUR_COURSE_FOLDER_ID" target="_blank" class="btn">Access Full Course</a>
+            <h2 class="ur">🎓 مکمل کورس مواد</h2>
+            <h2 class="en hidden">🎓 Full Course Content</h2>
+            <p class="ur">نیچے کلک کریں اور مکمل کورس دیکھیں:</p>
+            <p class="en hidden">Click below to watch the full course:</p>
+            <a href="https://drive.google.com/drive/folders/YOUR_COURSE_FOLDER_ID" target="_blank" class="btn ur">مکمل کورس دیکھیں</a>
+            <a href="https://drive.google.com/drive/folders/YOUR_COURSE_FOLDER_ID" target="_blank" class="btn en hidden">Access Full Course</a>
         </div>
 
-        <footer>© 2024 Your Name | All Rights Reserved</footer>
+        <footer>© 2024 آپ کا نام | جملہ حقوق محفوظ ہیں</footer>
     </div>
 
     <script>
-        document.getElementById("accessButton").addEventListener("click", function() {
-            let password = prompt("Enter Access Code:");
+        document.getElementById("accessButtonUrdu").addEventListener("click", function() {
+            let password = prompt("رسائی کوڈ درج کریں:");
             if (password === "YOUR_SECRET_CODE") {
                 document.getElementById("fullCourse").classList.remove("hidden");
             } else {
-                alert("Incorrect code. Please check your payment confirmation message.");
+                alert("غلط کوڈ۔ براہ کرم اپنی ادائیگی کی تصدیقی معلومات چیک کریں۔");
             }
+        });
+
+        document.getElementById("toggleLanguage").addEventListener("click", function() {
+            document.querySelectorAll(".ur").forEach(el => el.classList.toggle("hidden"));
+            document.querySelectorAll(".en").forEach(el => el.classList.toggle("hidden"));
         });
     </script>
 </body>
