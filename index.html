@@ -10,9 +10,9 @@
 <body>
     <div class="container">
         <header>
-            <button id="toggleLanguage">🌐 English / اردو</button>
             <h1 class="ur">🚀 شاپیفائی ڈراپ شپنگ کورس</h1>
             <h1 class="en hidden">🚀 Shopify Dropshipping Course</h1>
+            <button id="toggleLanguage">🌐 English / اردو</button>
         </header>
 
         <section class="intro">
@@ -59,15 +59,6 @@
     </div>
 
     <script>
-        document.getElementById("accessButtonUrdu").addEventListener("click", function() {
-            let password = prompt("🔒 رسائی کوڈ درج کریں:");
-            if (password === "YOUR_SECRET_CODE") {
-                document.getElementById("fullCourse").classList.remove("hidden");
-            } else {
-                alert("❌ غلط کوڈ! براہ کرم اپنی ادائیگی کی تفصیلات چیک کریں۔");
-            }
-        });
-
         document.getElementById("toggleLanguage").addEventListener("click", function() {
             document.querySelectorAll(".ur").forEach(el => el.classList.toggle("hidden"));
             document.querySelectorAll(".en").forEach(el => el.classList.toggle("hidden"));
