@@ -8,68 +8,60 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet">
 </head>
 <body>
-
     <div class="container">
         <!-- Language Switch Button -->
         <button id="toggleLanguage">English / اردو</button>
 
-        <h1 class="ur animate">🚀 شاپیفائی ڈراپ شپنگ کورس</h1>
-        <h1 class="en hidden animate">🚀 Shopify Dropshipping Course</h1>
+        <h1 class="ur">🚀 شاپیفائی ڈراپ شپنگ کورس</h1>
+        <h1 class="en hidden">🚀 Shopify Dropshipping Course</h1>
 
-        <p class="price ur animate">💰 <strong>کوئی سرمایہ کاری نہیں! 🔥</strong></p>
-        <p class="price en hidden animate">💰 <strong>No Investment Needed! 🔥</strong></p>
+        <p class="subtitle ur">🔹 کوئی سرمایہ کاری نہیں - 🎓 لائیو کلاسز: 9999/- 💻 ریکارڈ شدہ لیکچرز: 1999/-</p>
+        <p class="subtitle en hidden">🔹 No Investment - 🎓 Live Classes: 9999/- 💻 Recorded Lectures: 1999/-</p>
 
-        <p class="price ur animate">🎓 لائیو کلاسز: <strong>9999/-</strong> | 🎥 ریکارڈ شدہ لیکچرز: <strong>1999/-</strong></p>
-        <p class="price en hidden animate">🎓 Live Classes: <strong>9999/-</strong> | 🎥 Recorded Lectures: <strong>1999/-</strong></p>
-
-        <p class="subtitle ur animate">سیکھیں کہ کیسے ایک کامیاب شاپیفائی سٹور بنائیں!</p>
-        <p class="subtitle en hidden animate">Learn how to build a successful Shopify store from scratch!</p>
-
-        <div class="video-section animate">
+        <div class="video-section">
             <h2 class="ur">🎥 مفت ڈیمو ویڈیو دیکھیں</h2>
             <h2 class="en hidden">🎥 Watch the Free Demo Lesson</h2>
-            <iframe src="https://player.vimeo.com/video/1068707190?h=76f44c08bb&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="1920" height="1080" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" title="Shopify Free Demo Class in 2025"></iframe>
+            <iframe src="https://player.vimeo.com/video/1068694661?h=7ebe7d1c1d" frameborder="0" allow="autoplay; fullscreen; picture-in-picture"></iframe>
         </div>
 
-        <div class="access-section animate">
+        <div class="access-section">
             <h2 class="ur">📚 مکمل رسائی حاصل کریں</h2>
             <h2 class="en hidden">📚 Get Full Access</h2>
 
-            <p class="ur">مکمل کورس تک رسائی کے لیے ادائیگی بھیجیں:</p>
-            <p class="en hidden">To access the full course, send payment to:</p>
+            <p class="ur">ادائیگی کے بعد اسکرین شاٹ اور تفصیلات درج کریں:</p>
+            <p class="en hidden">After payment, enter your details and upload the screenshot:</p>
 
-            <p><strong>بینک اکاؤنٹ:</strong> 123456789</p>
-
-            <p class="ur">ادائیگی کے بعد اسکرین شاٹ بھیجیں:</p>
-            <p class="en hidden">After payment, send a screenshot to:</p>
-
-            <p><strong>ای میل:</strong> <a href="mailto:your-email@example.com">your-email@example.com</a></p>
-            <p><strong>واٹس ایپ:</strong> <a href="https://wa.me/1234567890" target="_blank">+1234567890</a></p>
-
-            <button id="accessButtonUrdu" class="ur">کیا آپ نے پہلے ہی ادائیگی کر دی؟ مکمل کورس تک رسائی حاصل کریں</button>
-            <button id="accessButton" class="en hidden">Already Paid? Access Course</button>
+            <button id="showFormButton" class="btn">🔒 ادائیگی کی تصدیق کریں</button>
         </div>
 
-        <div id="fullCourse" class="hidden animate">
-            <h2 class="ur">🎓 مکمل کورس مواد</h2>
-            <h2 class="en hidden">🎓 Full Course Content</h2>
-            <p class="ur">نیچے کلک کریں اور مکمل کورس دیکھیں:</p>
-            <p class="en hidden">Click below to watch the full course:</p>
-            <a href="https://drive.google.com/drive/folders/YOUR_COURSE_FOLDER_ID" target="_blank" class="btn ur">مکمل کورس دیکھیں</a>
-            <a href="https://drive.google.com/drive/folders/YOUR_COURSE_FOLDER_ID" target="_blank" class="btn en hidden">Access Full Course</a>
+        <!-- Payment Confirmation Form -->
+        <div id="paymentForm" class="hidden">
+            <h2 class="ur">💰 ادائیگی کی معلومات</h2>
+            <h2 class="en hidden">💰 Payment Information</h2>
+
+            <form action="https://formspree.io/f/mzzevjge" method="POST" enctype="multipart/form-data">
+                <label for="name" class="ur">نام:</label>
+                <label for="name" class="en hidden">Name:</label>
+                <input type="text" name="name" required>
+
+                <label for="email" class="ur">ای میل:</label>
+                <label for="email" class="en hidden">Email:</label>
+                <input type="email" name="email" required>
+
+                <label for="paymentScreenshot" class="ur">🔍 ادائیگی کا اسکرین شاٹ:</label>
+                <label for="paymentScreenshot" class="en hidden">🔍 Payment Screenshot:</label>
+                <input type="file" name="paymentScreenshot" accept="image/*" required>
+
+                <button type="submit" class="btn">📩 ارسال کریں</button>
+            </form>
         </div>
 
         <footer>© 2024 آپ کا نام | جملہ حقوق محفوظ ہیں</footer>
     </div>
 
     <script>
-        document.getElementById("accessButtonUrdu").addEventListener("click", function() {
-            let password = prompt("رسائی کوڈ درج کریں:");
-            if (password === "YOUR_SECRET_CODE") {
-                document.getElementById("fullCourse").classList.remove("hidden");
-            } else {
-                alert("غلط کوڈ۔ براہ کرم اپنی ادائیگی کی تصدیقی معلومات چیک کریں۔");
-            }
+        document.getElementById("showFormButton").addEventListener("click", function() {
+            document.getElementById("paymentForm").classList.remove("hidden");
         });
 
         document.getElementById("toggleLanguage").addEventListener("click", function() {
@@ -77,6 +69,5 @@
             document.querySelectorAll(".en").forEach(el => el.classList.toggle("hidden"));
         });
     </script>
-
 </body>
 </html>
