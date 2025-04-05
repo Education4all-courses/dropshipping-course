@@ -107,3 +107,57 @@ footer {
     font-size: 14px;
     opacity: 0.8;
 }
+
+.testimonial-section {
+    text-align: center;
+    background: #fff;
+    padding: 40px 20px;
+    position: relative;
+}
+.testimonial-container {
+    max-width: 600px;
+    margin: auto;
+    position: relative;
+}
+.testimonial-slide {
+    display: none;
+    text-align: center;
+    padding: 20px;
+}
+.testimonial-slide img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ff6600;
+}
+.testimonial-slide h3 {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #333;
+}
+.testimonial-slide p {
+    font-size: 14px;
+    color: #666;
+}
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 20px;
+}
+.prev { left: 10px; }
+.next { right: 10px; }
+.fade {
+    animation: fadeEffect 1.5s;
+}
+@keyframes fadeEffect {
+    from { opacity: 0.4; } 
+    to { opacity: 1; }
+}
+
