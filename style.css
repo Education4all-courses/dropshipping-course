@@ -114,32 +114,44 @@ footer {
     padding: 40px 20px;
     position: relative;
 }
+
 .testimonial-container {
-    max-width: 600px;
+    max-width: 900px;
     margin: auto;
     position: relative;
 }
+
 .testimonial-slide {
     display: none;
     text-align: center;
     padding: 20px;
 }
+
 .testimonial-slide img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    object-fit: cover;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: contain;
     border: 3px solid #ff6600;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
 }
+
 .testimonial-slide h3 {
-    margin: 10px 0;
-    font-size: 18px;
+    margin: 15px 0 10px;
+    font-size: 20px;
     color: #333;
 }
+
 .testimonial-slide p {
-    font-size: 14px;
-    color: #666;
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto;
 }
+
 .prev, .next {
     position: absolute;
     top: 50%;
@@ -149,15 +161,53 @@ footer {
     border: none;
     padding: 10px 15px;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 24px;
+    border-radius: 4px;
 }
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
 .prev { left: 10px; }
 .next { right: 10px; }
+
 .fade {
-    animation: fadeEffect 1.5s;
+    animation: fadeEffect 1s;
 }
+
 @keyframes fadeEffect {
-    from { opacity: 0.4; } 
+    from { opacity: 0.3; }
     to { opacity: 1; }
 }
+.payment-gallery-section {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.payment-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+.payment-gallery img {
+    width: 100%;
+    max-height: 600px;
+    object-fit: contain;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.payment-gallery img:hover {
+    transform: scale(1.03);
+    border-color: #007bff;
+}
+
 
