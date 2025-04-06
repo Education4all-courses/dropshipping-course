@@ -3,131 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🚀 شاپیفائی ڈراپ شپنگ کورس</title>
+    <title>🚀 Shopify Dropshipping Course</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        .banner {
+            background: #ff3c3c;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+            animation: pulse 1.5s infinite;
+        }
+        .offer-blink {
+            color: yellow;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .payment-slide {
+            display: none;
+            text-align: center;
+        }
+
+        .payment-container img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+    </style>
 </head>
 <body>
+
+    <div class="banner">
+        💥 Limited Offer: <del>Rs. 4000</del> <span class="offer-blink">Ab sirf Rs. 1999/-</span> 🔥 Sirf chand dinon ke liye!
+    </div>
+
     <div class="container">
-        <!-- Language Switch Button -->
         <button id="toggleLanguage">English / اردو</button>
 
-        <h1 class="ur">🚀 شاپیفائی ڈراپ شپنگ کورس</h1>
-        <h1 class="en hidden">🚀 Shopify Dropshipping Course</h1>
-
-        <p class="subtitle ur">🔹 کوئی سرمایہ کاری نہیں </p>
-        <p class="subtitle en hidden">🔹 No Investment - 🎓 Live Classes: 9999/- 💻 Recorded Lectures: 1999/-</p>
+        <h1>🚀 Shopify Dropshipping Course</h1>
+        <p>✅ Na koi investment chahiye, na koi degree ya high education!</p>
+        <p>📦 Sirf 8 din ka course hy, aur agar sath sath store banana start krdo + Facebook aur WhatsApp se kaam shuru krdo to earning bhi 8 din mein start ho sakti hai!</p>
 
         <div class="video-section">
-            <h2 class="ur">🎥 مفت ڈیمو ویڈیو دیکھیں</h2>
-            <h2 class="en hidden">🎥 Watch the Free Demo Lesson</h2>
+            <h2>🎥 Free Demo Video Dekho</h2>
             <iframe src="https://player.vimeo.com/video/1068694661?h=7ebe7d1c1d" frameborder="0" allow="autoplay; fullscreen; picture-in-picture"></iframe>
         </div>
 
-        
-<!-- Student Payment Gallery -->
-<div class="payment-gallery-section">
-    <h2 class="ur">💵 طلباء کی ادائیگیاں</h2>
-    <h2 class="en hidden">💵 Student Payments</h2>
+        <!-- Payment Slider Section -->
+        <div class="payment-gallery-section">
+            <h2>💵 Real Students ki Payments</h2>
+            <div class="payment-container">
+                <div class="payment-slide fade"><img src="p2.jpeg" alt="Payment 1"></div>
+                <div class="payment-slide fade"><img src="p3.jpeg" alt="Payment 2"></div>
+                <div class="payment-slide fade"><img src="p4.jpeg" alt="Payment 3"></div>
+                <div class="payment-slide fade"><img src="p5.jpeg" alt="Payment 4"></div>
+                <div class="payment-slide fade"><img src="p6.jpeg" alt="Payment 5"></div>
+                <div class="payment-slide fade"><img src="p7.jpeg" alt="Payment 6"></div>
+                <div class="payment-slide fade"><img src="p8.jpeg" alt="Payment 7"></div>
+                <div class="payment-slide fade"><img src="p9.jpeg" alt="Payment 8"></div>
+            </div>
+            <button class="prev" onclick="plusPaymentSlides(-1)">&#10094;</button>
+            <button class="next" onclick="plusPaymentSlides(1)">&#10095;</button>
+        </div>
 
-    <div class="payment-gallery">
-        
-        <img src="p2.jpeg" alt="Payment 2" loading="lazy">
-        <img src="p3.jpeg" alt="Payment 3" loading="lazy">
-        <img src="p4.jpeg" alt="Payment 1" loading="lazy">
-        <img src="p5.jpeg" alt="Payment 2" loading="lazy">
-        <img src="p6.jpeg" alt="Payment 3" loading="lazy">
-        <img src="p7.jpeg" alt="Payment 1" loading="lazy">
-        <img src="p8.jpeg" alt="Payment 2" loading="lazy">
-        <img src="p9.jpeg" alt="Payment 3" loading="lazy">
-        
-        <!-- Add more as needed -->
-    </div>
-</div>
+        <!-- Testimonials -->
+        <div class="testimonial-section">
+            <h2>🌟 Students ka Feedback</h2>
+            <div class="testimonial-container">
+                <div class="testimonial-slide fade"><img src="t1.jpeg" alt="Student 1"></div>
+                <div class="testimonial-slide fade"><img src="t2.jpeg" alt="Student 2"></div>
+                <div class="testimonial-slide fade"><img src="t3.jpeg" alt="Student 3"></div>
+                <div class="testimonial-slide fade"><img src="t4.jpeg" alt="Student 4"></div>
+                <div class="testimonial-slide fade"><img src="t5.jpeg" alt="Student 5"></div>
+                <div class="testimonial-slide fade"><img src="t6.jpeg" alt="Student 6"></div>
+            </div>
+            <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
+            <button class="next" onclick="plusSlides(1)">&#10095;</button>
+        </div>
 
-        
-    
-    <!-- Testimonials Section -->
-<div class="testimonial-section">
-    <h2 class="ur">🌟 طلبہ کے تاثرات</h2>
-    <h2 class="en hidden">🌟 Student Testimonials</h2>
+        <!-- Payment Instructions -->
+        <div class="payment-instructions">
+            <h2>🤑 Join krne ka tareeqa:</h2>
+            <p>🛒 Rs. 1999/- sirf aik dafa pay krni hai aur lifetime access milta hai!</p>
+            <p>👇 Payment bhejne ke liye ye details use karo:</p>
+            <ul>
+                <li><strong>Bank Name:</strong> Your Bank</li>
+                <li><strong>Account Number:</strong> 123456789</li>
+                <li><strong>Account Holder:</strong> Your Name</li>
+            </ul>
+            <p>Payment ka screenshot WhatsApp pe bhej dein: <a href="https://wa.me/yourwhatsappnumber">WhatsApp Now</a></p>
+            <p>Uske baad email address bhejein, aur course ka access turant mil jaye ga!</p>
+        </div>
 
-    <div class="testimonial-container">
-        <div class="testimonial-slide fade">
-            <img src="t1.jpeg" alt="Student 1">
-        </div>
-        <div class="testimonial-slide fade">
-            <img src="t2.jpeg" alt="Student 2">
-            
-        </div>
-        <div class="testimonial-slide fade">
-            <img src="t3.jpeg" alt="Student 3">
-        </div>
-        <div class="testimonial-slide fade">
-            <img src="t4.jpeg" alt="Student 3">
-        </div>
-        <div class="testimonial-slide fade">
-            <img src="t5.jpeg" alt="Student 3">
-        </div>
-        <div class="testimonial-slide fade">
-            <img src="t6.jpeg" alt="Student 3">
-        </div>
     </div>
 
-    <div class="payment-instructions">
-    <h2>Special Limited-Time Offer!</h2>
-    <p>Originally priced at <del>Rs. 4000</del>, now available for just <strong>Rs. 1999/-</strong>! Hurry, offer ends soon!</p>
-    <p>To enroll, please send your payment to the following account:</p>
-    <ul>
-        <li><strong>Bank Name:</strong> Your Bank</li>
-        <li><strong>Account Number:</strong> 123456789</li>
-        <li><strong>Account Holder:</strong> Your Name</li>
-    </ul>
-    <p>After making the payment, please send the payment screenshot to our WhatsApp at <a href="https://wa.me/yourwhatsappnumber">Your WhatsApp Number</a> along with your email address to receive the course access.</p>
-</div>
+    <footer>© Education Valley - 2025</footer>
 
-
-    <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
-    <button class="next" onclick="plusSlides(1)">&#10095;</button>
-</div>
-
- <footer> Education Valley - 2025 </footer>
+    <!-- Scripts -->
     <script>
-        document.getElementById("showFormButton").addEventListener("click", function() {
-            document.getElementById("paymentForm").classList.remove("hidden");
+        // Toggle Language
+        document.getElementById("toggleLanguage").addEventListener("click", function () {
+            document.querySelectorAll(".ur, .en").forEach(el => el.classList.toggle("hidden"));
         });
 
-        document.getElementById("toggleLanguage").addEventListener("click", function() {
-            document.querySelectorAll(".ur").forEach(el => el.classList.toggle("hidden"));
-            document.querySelectorAll(".en").forEach(el => el.classList.toggle("hidden"));
-        });
+        // Testimonials
+        let slideIndex = 0;
+        showSlides();
+        function showSlides() {
+            let slides = document.getElementsByClassName("testimonial-slide");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1; }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 3000);
+        }
+
+        function plusSlides(n) {
+            slideIndex += n;
+            let slides = document.getElementsByClassName("testimonial-slide");
+            if (slideIndex > slides.length) { slideIndex = 1; }
+            if (slideIndex < 1) { slideIndex = slides.length; }
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex - 1].style.display = "block";
+        }
+
+        // Payment Slider
+        let payIndex = 0;
+        showPaymentSlides();
+        function showPaymentSlides() {
+            let pays = document.getElementsByClassName("payment-slide");
+            for (let i = 0; i < pays.length; i++) {
+                pays[i].style.display = "none";
+            }
+            payIndex++;
+            if (payIndex > pays.length) { payIndex = 1; }
+            pays[payIndex - 1].style.display = "block";
+            setTimeout(showPaymentSlides, 3000);
+        }
+
+        function plusPaymentSlides(n) {
+            payIndex += n;
+            let pays = document.getElementsByClassName("payment-slide");
+            if (payIndex > pays.length) { payIndex = 1; }
+            if (payIndex < 1) { payIndex = pays.length; }
+            for (let i = 0; i < pays.length; i++) {
+                pays[i].style.display = "none";
+            }
+            pays[payIndex - 1].style.display = "block";
+        }
     </script>
-    <script>
-    let slideIndex = 0;
-    showSlides();
-
-    function showSlides() {
-        let slides = document.getElementsByClassName("testimonial-slide");
-        for (let i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";  
-        }
-        slideIndex++;
-        if (slideIndex > slides.length) { slideIndex = 1; }  
-        slides[slideIndex - 1].style.display = "block";  
-        setTimeout(showSlides, 3000); // Change slide every 3 seconds
-    }
-
-    function plusSlides(n) {
-        slideIndex += n;
-        let slides = document.getElementsByClassName("testimonial-slide");
-        if (slideIndex > slides.length) { slideIndex = 1; }
-        if (slideIndex < 1) { slideIndex = slides.length; }
-        for (let i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";  
-        }
-        slides[slideIndex - 1].style.display = "block";
-    }
-</script>
 
 </body>
 </html>
