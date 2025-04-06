@@ -1,276 +1,160 @@
+
 <!DOCTYPE html>
 <html lang="ur">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>🚀 Shopify Dropshipping Course</title>
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f7f7f7;
-      text-align: center;
-    }
-
-    .container {
-      padding: 20px;
-    }
-
-    .hidden {
-      display: none;
-    }
-
-    h1, h2, p {
-      margin: 10px 0;
-    }
-
-    .subtitle {
-      font-size: 18px;
-      font-weight: bold;
-      color: #d9534f;
-    }
-
-    .video-section iframe {
-      width: 100%;
-      max-width: 560px;
-      height: 315px;
-      margin: 20px auto;
-      display: block;
-      border-radius: 10px;
-    }
-
-    .slider-section {
-      max-width: 560px;
-      margin: 20px auto;
-      position: relative;
-    }
-
-    .testimonial-slide, .payment-slide {
-      display: none;
-    }
-
-    .testimonial-slide img,
-    .payment-slide img {
-      max-width: 100%;
-      width: 100%;
-      height: auto;
-      border-radius: 10px;
-      display: block;
-      margin: 0 auto;
-    }
-
-    .prev, .next {
-      cursor: pointer;
-      position: absolute;
-      top: 50%;
-      width: auto;
-      padding: 12px;
-      color: white;
-      font-weight: bold;
-      font-size: 24px;
-      transition: 0.3s ease;
-      border-radius: 0 3px 3px 0;
-      user-select: none;
-      background-color: #333;
-    }
-
-    .next {
-      right: 0;
-      border-radius: 3px 0 0 3px;
-    }
-
-    .prev:hover, .next:hover {
-      background-color: #555;
-    }
-
-    .limited-offer {
-      background: linear-gradient(45deg, #ff0000, #ff6600);
-      color: white;
-      padding: 10px;
-      font-size: 20px;
-      font-weight: bold;
-      animation: pulse 1s infinite alternate;
-    }
-
-    @keyframes pulse {
-      from { transform: scale(1); }
-      to { transform: scale(1.05); }
-    }
-
-    .payment-instructions {
-      background: #fff3cd;
-      padding: 20px;
-      border-radius: 10px;
-      max-width: 560px;
-      margin: 20px auto;
-      text-align: left;
-    }
-
-    footer {
-      margin-top: 40px;
-      padding: 10px;
-      background-color: #333;
-      color: white;
-    }
-
-    button#toggleLanguage {
-      position: fixed;
-      top: 10px;
-      right: 10px;
-      z-index: 999;
-      padding: 8px 12px;
-    }
-
-    #whatsappBtn {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #25d366;
-      color: white;
-      border: none;
-      padding: 12px 20px;
-      border-radius: 50px;
-      font-size: 16px;
-      font-weight: bold;
-      cursor: pointer;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-      z-index: 999;
-    }
-
-    .countdown {
-      font-size: 18px;
-      font-weight: bold;
-      background: #000;
-      color: #fff;
-      padding: 10px;
-      max-width: 560px;
-      margin: 20px auto;
-      border-radius: 10px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚀 Shopify DropShipping Course - Roman Urdu</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        h1, h2, p {
+            margin: 10px 0;
+        }
+        .banner {
+            background: linear-gradient(135deg, #ff416c, #ff4b2b);
+            color: white;
+            padding: 15px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            animation: pulse 1.5s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        .video-section iframe {
+            width: 90%;
+            max-width: 560px;
+            height: 315px;
+            margin: 20px 0;
+        }
+        .slider-container {
+            position: relative;
+            max-width: 560px;
+            margin: auto;
+        }
+        .slide {
+            display: none;
+        }
+        .slide img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2rem;
+            padding: 10px;
+            color: #333;
+            background-color: #ffffffc2;
+            border-radius: 50%;
+        }
+        .prev { left: 0; }
+        .next { right: 0; }
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25d366;
+            color: white;
+            padding: 12px 16px;
+            border-radius: 50%;
+            font-size: 24px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+            z-index: 999;
+            text-decoration: none;
+        }
+        .countdown {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin: 10px 0;
+            color: red;
+        }
+    </style>
 </head>
 <body>
+    <div class="banner">
+        🎉 Limited Offer: Rs. <del>4000</del> ab sirf 1999/- mein!
+    </div>
 
-<div class="limited-offer">
-  💥 LIMITED TIME OFFER: Rs. <del>4000</del> ➜ Ab sirf Rs. <strong>1999/-</strong> mein! Jaldi karo! 🕒
-</div>
+    <h1>🚀 Shopify DropShipping Seekho - Sirf 8 Dino Mein</h1>
+    <p>Na koi investment chahiye, na koi degree ya education. Course simple Urdu mein hai!</p>
+    <p>Agar aaj start kar do, to 8 dino mein earning bhi start ho sakti hai!</p>
+    <p>Bus course ke sath sath apna store banao, Facebook aur WhatsApp use karo!</p>
 
-<div class="countdown" id="countdown">⏳ Offer ends in: Loading...</div>
+    <div class="countdown" id="countdown">Offer khatam hone mein: --:--:--</div>
 
-<div class="container">
-  <button id="toggleLanguage">English / اردو</button>
+    <div class="video-section">
+        <h2>🎥 Demo Video Dekho</h2>
+        <iframe src="https://player.vimeo.com/video/1068694661?h=7ebe7d1c1d" frameborder="0" allow="autoplay; fullscreen; picture-in-picture"></iframe>
+    </div>
 
-  <h1 class="ur">🚀 Shopify Dropshipping Course</h1>
-  <p class="subtitle ur">⚡ Koi investment ya education ki zaroorat nahi! Sirf 8 din mein earning start kar saktay ho!</p>
+    <h2>💵 Students ke Payment Proofs</h2>
+    <div class="slider-container" id="paymentSlider">
+        <div class="slide"><img src="p2.jpeg" alt="Payment 1"></div>
+        <div class="slide"><img src="p3.jpeg" alt="Payment 2"></div>
+        <div class="slide"><img src="p4.jpeg" alt="Payment 3"></div>
+    </div>
 
-  <div class="video-section">
-    <h2 class="ur">🎥 Free Demo Dekho</h2>
-    <iframe src="https://player.vimeo.com/video/1068694661?h=7ebe7d1c1d" frameborder="0" allow="autoplay; fullscreen; picture-in-picture"></iframe>
-  </div>
+    <h2>🌟 Students ke Reviews</h2>
+    <div class="slider-container" id="testimonialSlider">
+        <div class="slide"><img src="t1.jpeg" alt="Review 1"></div>
+        <div class="slide"><img src="t2.jpeg" alt="Review 2"></div>
+        <div class="slide"><img src="t3.jpeg" alt="Review 3"></div>
+    </div>
 
-  <h2 class="ur">🌟 Students ke Feedback</h2>
-  <div class="slider-section">
-    <div class="testimonial-slide fade"><img src="t1.jpeg" alt="Student 1"></div>
-    <div class="testimonial-slide fade"><img src="t2.jpeg" alt="Student 2"></div>
-    <div class="testimonial-slide fade"><img src="t3.jpeg" alt="Student 3"></div>
-    <div class="testimonial-slide fade"><img src="t4.jpeg" alt="Student 4"></div>
-    <button class="prev" onclick="plusSlides(-1, 'testimonial')">&#10094;</button>
-    <button class="next" onclick="plusSlides(1, 'testimonial')">&#10095;</button>
-  </div>
+    <br><br>
+    <h2>Enroll Karne ka Tareeqa:</h2>
+    <p>Abhi Rs. 1999/- payment karo:</p>
+    <p><strong>Bank:</strong> Your Bank</p>
+    <p><strong>Account:</strong> 123456789</p>
+    <p><strong>Name:</strong> Your Name</p>
+    <p>Payment ka screenshot WhatsApp karo: <a href="https://wa.me/yourwhatsappnumber">📲 WhatsApp Now</a></p>
 
-  <h2 class="ur">💸 Logon ki Payments Proofs</h2>
-  <div class="slider-section">
-    <div class="payment-slide fade"><img src="p2.jpeg" alt="Payment 1"></div>
-    <div class="payment-slide fade"><img src="p3.jpeg" alt="Payment 2"></div>
-    <div class="payment-slide fade"><img src="p4.jpeg" alt="Payment 3"></div>
-    <div class="payment-slide fade"><img src="p5.jpeg" alt="Payment 4"></div>
-    <button class="prev" onclick="plusSlides(-1, 'payment')">&#10094;</button>
-    <button class="next" onclick="plusSlides(1, 'payment')">&#10095;</button>
-  </div>
+    <a href="https://wa.me/yourwhatsappnumber?text=Salam!%20Mujhe%20Shopify%20course%20mein%20enroll%20hona%20hai.%20Payment%20kar%20di%20hai." class="floating-whatsapp">💬</a>
 
-  <div class="payment-instructions">
-    <h2>📌 Enroll Karne ka Tareeqa</h2>
-    <p>Sirf Rs. <strong>1999/-</strong> mein full course lein, koi investment ya degree ki zaroorat nahi!</p>
-    <ul>
-      <li><strong>Bank Name:</strong> ABC Bank</li>
-      <li><strong>Account Number:</strong> 123456789</li>
-      <li><strong>Account Holder:</strong> Aapka Naam</li>
-    </ul>
-    <p>Payment ka screenshot bhejein WhatsApp pe: <a href="#" onclick="openWhatsApp()">WhatsApp Now</a> ✅</p>
-    <p>Email bhi zaroor de dein course access ke liye.</p>
-  </div>
-</div>
+    <script>
+        // Countdown Timer
+        const countdown = document.getElementById("countdown");
+        const deadline = new Date().getTime() + 3*24*60*60*1000; // 3 days from now
+        setInterval(() => {
+            const now = new Date().getTime();
+            const t = deadline - now;
+            if (t > 0) {
+                const days = Math.floor(t / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((t % (1000 * 60)) / 1000);
+                countdown.innerText = `Offer khatam hone mein: ${days}d ${hours}h ${minutes}m ${seconds}s`;
+            } else {
+                countdown.innerText = "Offer khatam ho chuki hai!";
+            }
+        }, 1000);
 
-<footer>🚀 Education Valley - 2025</footer>
+        // Slider Logic
+        function startSlider(sliderId) {
+            let index = 0;
+            const slides = document.querySelectorAll(`#${sliderId} .slide`);
+            function showSlide() {
+                slides.forEach((s, i) => s.style.display = i === index ? 'block' : 'none');
+                index = (index + 1) % slides.length;
+            }
+            showSlide();
+            setInterval(showSlide, 3000);
+        }
 
-<!-- Floating WhatsApp Button -->
-<button id="whatsappBtn" onclick="openWhatsApp()">💬 Enroll Now on WhatsApp</button>
-
-<script>
-  let testimonialIndex = 0;
-  let paymentIndex = 0;
-  showSlides('testimonial');
-  showSlides('payment');
-
-  function showSlides(type) {
-    let slides;
-    if (type === 'testimonial') {
-      slides = document.getElementsByClassName("testimonial-slide");
-      testimonialIndex++;
-      if (testimonialIndex > slides.length) testimonialIndex = 1;
-      for (let i = 0; i < slides.length; i++) slides[i].style.display = "none";
-      slides[testimonialIndex - 1].style.display = "block";
-      setTimeout(() => showSlides('testimonial'), 3000);
-    } else {
-      slides = document.getElementsByClassName("payment-slide");
-      paymentIndex++;
-      if (paymentIndex > slides.length) paymentIndex = 1;
-      for (let i = 0; i < slides.length; i++) slides[i].style.display = "none";
-      slides[paymentIndex - 1].style.display = "block";
-      setTimeout(() => showSlides('payment'), 3500);
-    }
-  }
-
-  function plusSlides(n, type) {
-    if (type === 'testimonial') {
-      testimonialIndex += n - 1;
-      showSlides('testimonial');
-    } else {
-      paymentIndex += n - 1;
-      showSlides('payment');
-    }
-  }
-
-  document.getElementById("toggleLanguage").addEventListener("click", function () {
-    document.querySelectorAll(".ur").forEach(el => el.classList.toggle("hidden"));
-    document.querySelectorAll(".en").forEach(el => el.classList.toggle("hidden"));
-  });
-
-  // WhatsApp Message Open
-  function openWhatsApp() {
-    const message = encodeURIComponent("Salam! Mein Shopify course ke liye enroll karna chahta hoon. Payment ki details de di hain. Mera naam: ______ aur email: ______");
-    window.open("https://wa.me/923001234567?text=" + message, "_blank");
-  }
-
-  // Countdown Timer
-  const endTime = new Date().getTime() + (2 * 24 * 60 * 60 * 1000); // 2 days from now
-  const countdownEl = document.getElementById("countdown");
-
-  setInterval(() => {
-    const now = new Date().getTime();
-    const diff = endTime - now;
-    if (diff <= 0) {
-      countdownEl.innerHTML = "⚠️ Offer khatam ho gayi hai!";
-      return;
-    }
-    const d = Math.floor(diff / (1000 * 60 * 60 * 24));
-    const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-    const s = Math.floor((diff % (1000 * 60)) / 1000);
-    countdownEl.innerHTML = `⏳ Offer ends in: ${d}d ${h}h ${m}m ${s}s`;
-  }, 1000);
-</script>
-
+        startSlider("testimonialSlider");
+        startSlider("paymentSlider");
+    </script>
 </body>
 </html>
