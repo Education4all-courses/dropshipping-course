@@ -1,165 +1,276 @@
 <!DOCTYPE html>
 <html lang="ur">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🚀 Shopify Dropshipping Course</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        .banner {
-            background: #ff3c3c;
-            color: white;
-            padding: 10px;
-            text-align: center;
-            font-weight: bold;
-            animation: pulse 1.5s infinite;
-        }
-        .offer-blink {
-            color: yellow;
-        }
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🚀 Shopify Dropshipping Course</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f7f7f7;
+      text-align: center;
+    }
 
-        .payment-slide {
-            display: none;
-            text-align: center;
-        }
+    .container {
+      padding: 20px;
+    }
 
-        .payment-container img {
-            max-width: 100%;
-            border-radius: 10px;
-        }
-    </style>
+    .hidden {
+      display: none;
+    }
+
+    h1, h2, p {
+      margin: 10px 0;
+    }
+
+    .subtitle {
+      font-size: 18px;
+      font-weight: bold;
+      color: #d9534f;
+    }
+
+    .video-section iframe {
+      width: 100%;
+      max-width: 560px;
+      height: 315px;
+      margin: 20px auto;
+      display: block;
+      border-radius: 10px;
+    }
+
+    .slider-section {
+      max-width: 560px;
+      margin: 20px auto;
+      position: relative;
+    }
+
+    .testimonial-slide, .payment-slide {
+      display: none;
+    }
+
+    .testimonial-slide img,
+    .payment-slide img {
+      max-width: 100%;
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 12px;
+      color: white;
+      font-weight: bold;
+      font-size: 24px;
+      transition: 0.3s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      background-color: #333;
+    }
+
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    .prev:hover, .next:hover {
+      background-color: #555;
+    }
+
+    .limited-offer {
+      background: linear-gradient(45deg, #ff0000, #ff6600);
+      color: white;
+      padding: 10px;
+      font-size: 20px;
+      font-weight: bold;
+      animation: pulse 1s infinite alternate;
+    }
+
+    @keyframes pulse {
+      from { transform: scale(1); }
+      to { transform: scale(1.05); }
+    }
+
+    .payment-instructions {
+      background: #fff3cd;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 560px;
+      margin: 20px auto;
+      text-align: left;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 10px;
+      background-color: #333;
+      color: white;
+    }
+
+    button#toggleLanguage {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      z-index: 999;
+      padding: 8px 12px;
+    }
+
+    #whatsappBtn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 50px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      z-index: 999;
+    }
+
+    .countdown {
+      font-size: 18px;
+      font-weight: bold;
+      background: #000;
+      color: #fff;
+      padding: 10px;
+      max-width: 560px;
+      margin: 20px auto;
+      border-radius: 10px;
+    }
+  </style>
 </head>
 <body>
 
-    <div class="banner">
-        💥 Limited Offer: <del>Rs. 4000</del> <span class="offer-blink">Ab sirf Rs. 1999/-</span> 🔥 Sirf chand dinon ke liye!
-    </div>
+<div class="limited-offer">
+  💥 LIMITED TIME OFFER: Rs. <del>4000</del> ➜ Ab sirf Rs. <strong>1999/-</strong> mein! Jaldi karo! 🕒
+</div>
 
-    <div class="container">
-        <button id="toggleLanguage">English / اردو</button>
+<div class="countdown" id="countdown">⏳ Offer ends in: Loading...</div>
 
-        <h1>🚀 Shopify Dropshipping Course</h1>
-        <p>✅ Na koi investment chahiye, na koi degree ya high education!</p>
-        <p>📦 Sirf 8 din ka course hy, aur agar sath sath store banana start krdo + Facebook aur WhatsApp se kaam shuru krdo to earning bhi 8 din mein start ho sakti hai!</p>
+<div class="container">
+  <button id="toggleLanguage">English / اردو</button>
 
-        <div class="video-section">
-            <h2>🎥 Free Demo Video Dekho</h2>
-            <iframe src="https://player.vimeo.com/video/1068694661?h=7ebe7d1c1d" frameborder="0" allow="autoplay; fullscreen; picture-in-picture"></iframe>
-        </div>
+  <h1 class="ur">🚀 Shopify Dropshipping Course</h1>
+  <p class="subtitle ur">⚡ Koi investment ya education ki zaroorat nahi! Sirf 8 din mein earning start kar saktay ho!</p>
 
-        <!-- Payment Slider Section -->
-        <div class="payment-gallery-section">
-            <h2>💵 Real Students ki Payments</h2>
-            <div class="payment-container">
-                <div class="payment-slide fade"><img src="p2.jpeg" alt="Payment 1"></div>
-                <div class="payment-slide fade"><img src="p3.jpeg" alt="Payment 2"></div>
-                <div class="payment-slide fade"><img src="p4.jpeg" alt="Payment 3"></div>
-                <div class="payment-slide fade"><img src="p5.jpeg" alt="Payment 4"></div>
-                <div class="payment-slide fade"><img src="p6.jpeg" alt="Payment 5"></div>
-                <div class="payment-slide fade"><img src="p7.jpeg" alt="Payment 6"></div>
-                <div class="payment-slide fade"><img src="p8.jpeg" alt="Payment 7"></div>
-                <div class="payment-slide fade"><img src="p9.jpeg" alt="Payment 8"></div>
-            </div>
-            <button class="prev" onclick="plusPaymentSlides(-1)">&#10094;</button>
-            <button class="next" onclick="plusPaymentSlides(1)">&#10095;</button>
-        </div>
+  <div class="video-section">
+    <h2 class="ur">🎥 Free Demo Dekho</h2>
+    <iframe src="https://player.vimeo.com/video/1068694661?h=7ebe7d1c1d" frameborder="0" allow="autoplay; fullscreen; picture-in-picture"></iframe>
+  </div>
 
-        <!-- Testimonials -->
-        <div class="testimonial-section">
-            <h2>🌟 Students ka Feedback</h2>
-            <div class="testimonial-container">
-                <div class="testimonial-slide fade"><img src="t1.jpeg" alt="Student 1"></div>
-                <div class="testimonial-slide fade"><img src="t2.jpeg" alt="Student 2"></div>
-                <div class="testimonial-slide fade"><img src="t3.jpeg" alt="Student 3"></div>
-                <div class="testimonial-slide fade"><img src="t4.jpeg" alt="Student 4"></div>
-                <div class="testimonial-slide fade"><img src="t5.jpeg" alt="Student 5"></div>
-                <div class="testimonial-slide fade"><img src="t6.jpeg" alt="Student 6"></div>
-            </div>
-            <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
-            <button class="next" onclick="plusSlides(1)">&#10095;</button>
-        </div>
+  <h2 class="ur">🌟 Students ke Feedback</h2>
+  <div class="slider-section">
+    <div class="testimonial-slide fade"><img src="t1.jpeg" alt="Student 1"></div>
+    <div class="testimonial-slide fade"><img src="t2.jpeg" alt="Student 2"></div>
+    <div class="testimonial-slide fade"><img src="t3.jpeg" alt="Student 3"></div>
+    <div class="testimonial-slide fade"><img src="t4.jpeg" alt="Student 4"></div>
+    <button class="prev" onclick="plusSlides(-1, 'testimonial')">&#10094;</button>
+    <button class="next" onclick="plusSlides(1, 'testimonial')">&#10095;</button>
+  </div>
 
-        <!-- Payment Instructions -->
-        <div class="payment-instructions">
-            <h2>🤑 Join krne ka tareeqa:</h2>
-            <p>🛒 Rs. 1999/- sirf aik dafa pay krni hai aur lifetime access milta hai!</p>
-            <p>👇 Payment bhejne ke liye ye details use karo:</p>
-            <ul>
-                <li><strong>Bank Name:</strong> Your Bank</li>
-                <li><strong>Account Number:</strong> 123456789</li>
-                <li><strong>Account Holder:</strong> Your Name</li>
-            </ul>
-            <p>Payment ka screenshot WhatsApp pe bhej dein: <a href="https://wa.me/yourwhatsappnumber">WhatsApp Now</a></p>
-            <p>Uske baad email address bhejein, aur course ka access turant mil jaye ga!</p>
-        </div>
+  <h2 class="ur">💸 Logon ki Payments Proofs</h2>
+  <div class="slider-section">
+    <div class="payment-slide fade"><img src="p2.jpeg" alt="Payment 1"></div>
+    <div class="payment-slide fade"><img src="p3.jpeg" alt="Payment 2"></div>
+    <div class="payment-slide fade"><img src="p4.jpeg" alt="Payment 3"></div>
+    <div class="payment-slide fade"><img src="p5.jpeg" alt="Payment 4"></div>
+    <button class="prev" onclick="plusSlides(-1, 'payment')">&#10094;</button>
+    <button class="next" onclick="plusSlides(1, 'payment')">&#10095;</button>
+  </div>
 
-    </div>
+  <div class="payment-instructions">
+    <h2>📌 Enroll Karne ka Tareeqa</h2>
+    <p>Sirf Rs. <strong>1999/-</strong> mein full course lein, koi investment ya degree ki zaroorat nahi!</p>
+    <ul>
+      <li><strong>Bank Name:</strong> ABC Bank</li>
+      <li><strong>Account Number:</strong> 123456789</li>
+      <li><strong>Account Holder:</strong> Aapka Naam</li>
+    </ul>
+    <p>Payment ka screenshot bhejein WhatsApp pe: <a href="#" onclick="openWhatsApp()">WhatsApp Now</a> ✅</p>
+    <p>Email bhi zaroor de dein course access ke liye.</p>
+  </div>
+</div>
 
-    <footer>© Education Valley - 2025</footer>
+<footer>🚀 Education Valley - 2025</footer>
 
-    <!-- Scripts -->
-    <script>
-        // Toggle Language
-        document.getElementById("toggleLanguage").addEventListener("click", function () {
-            document.querySelectorAll(".ur, .en").forEach(el => el.classList.toggle("hidden"));
-        });
+<!-- Floating WhatsApp Button -->
+<button id="whatsappBtn" onclick="openWhatsApp()">💬 Enroll Now on WhatsApp</button>
 
-        // Testimonials
-        let slideIndex = 0;
-        showSlides();
-        function showSlides() {
-            let slides = document.getElementsByClassName("testimonial-slide");
-            for (let i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) { slideIndex = 1; }
-            slides[slideIndex - 1].style.display = "block";
-            setTimeout(showSlides, 3000);
-        }
+<script>
+  let testimonialIndex = 0;
+  let paymentIndex = 0;
+  showSlides('testimonial');
+  showSlides('payment');
 
-        function plusSlides(n) {
-            slideIndex += n;
-            let slides = document.getElementsByClassName("testimonial-slide");
-            if (slideIndex > slides.length) { slideIndex = 1; }
-            if (slideIndex < 1) { slideIndex = slides.length; }
-            for (let i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            slides[slideIndex - 1].style.display = "block";
-        }
+  function showSlides(type) {
+    let slides;
+    if (type === 'testimonial') {
+      slides = document.getElementsByClassName("testimonial-slide");
+      testimonialIndex++;
+      if (testimonialIndex > slides.length) testimonialIndex = 1;
+      for (let i = 0; i < slides.length; i++) slides[i].style.display = "none";
+      slides[testimonialIndex - 1].style.display = "block";
+      setTimeout(() => showSlides('testimonial'), 3000);
+    } else {
+      slides = document.getElementsByClassName("payment-slide");
+      paymentIndex++;
+      if (paymentIndex > slides.length) paymentIndex = 1;
+      for (let i = 0; i < slides.length; i++) slides[i].style.display = "none";
+      slides[paymentIndex - 1].style.display = "block";
+      setTimeout(() => showSlides('payment'), 3500);
+    }
+  }
 
-        // Payment Slider
-        let payIndex = 0;
-        showPaymentSlides();
-        function showPaymentSlides() {
-            let pays = document.getElementsByClassName("payment-slide");
-            for (let i = 0; i < pays.length; i++) {
-                pays[i].style.display = "none";
-            }
-            payIndex++;
-            if (payIndex > pays.length) { payIndex = 1; }
-            pays[payIndex - 1].style.display = "block";
-            setTimeout(showPaymentSlides, 3000);
-        }
+  function plusSlides(n, type) {
+    if (type === 'testimonial') {
+      testimonialIndex += n - 1;
+      showSlides('testimonial');
+    } else {
+      paymentIndex += n - 1;
+      showSlides('payment');
+    }
+  }
 
-        function plusPaymentSlides(n) {
-            payIndex += n;
-            let pays = document.getElementsByClassName("payment-slide");
-            if (payIndex > pays.length) { payIndex = 1; }
-            if (payIndex < 1) { payIndex = pays.length; }
-            for (let i = 0; i < pays.length; i++) {
-                pays[i].style.display = "none";
-            }
-            pays[payIndex - 1].style.display = "block";
-        }
-    </script>
+  document.getElementById("toggleLanguage").addEventListener("click", function () {
+    document.querySelectorAll(".ur").forEach(el => el.classList.toggle("hidden"));
+    document.querySelectorAll(".en").forEach(el => el.classList.toggle("hidden"));
+  });
+
+  // WhatsApp Message Open
+  function openWhatsApp() {
+    const message = encodeURIComponent("Salam! Mein Shopify course ke liye enroll karna chahta hoon. Payment ki details de di hain. Mera naam: ______ aur email: ______");
+    window.open("https://wa.me/923001234567?text=" + message, "_blank");
+  }
+
+  // Countdown Timer
+  const endTime = new Date().getTime() + (2 * 24 * 60 * 60 * 1000); // 2 days from now
+  const countdownEl = document.getElementById("countdown");
+
+  setInterval(() => {
+    const now = new Date().getTime();
+    const diff = endTime - now;
+    if (diff <= 0) {
+      countdownEl.innerHTML = "⚠️ Offer khatam ho gayi hai!";
+      return;
+    }
+    const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const s = Math.floor((diff % (1000 * 60)) / 1000);
+    countdownEl.innerHTML = `⏳ Offer ends in: ${d}d ${h}h ${m}m ${s}s`;
+  }, 1000);
+</script>
 
 </body>
 </html>
