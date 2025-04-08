@@ -119,14 +119,18 @@
       position: relative;
     }
 
-    .slide-img {
+    .payment-img,
+    .testimonial-img {
       display: none;
       width: 100%;
+      max-height: 400px;
+      object-fit: contain;
       border-radius: 12px;
       box-shadow: 0 6px 16px rgba(0,0,0,0.1);
     }
 
-    .slide-img.active {
+    .payment-img.active,
+    .testimonial-img.active {
       display: block;
     }
 
@@ -214,23 +218,25 @@
       </div>
     </div>
 
-    <div class="slider">
-      <img class="slide-img active" src="p2.jpeg" alt="Payment 1" />
-      <img class="slide-img" src="p3.jpeg" alt="Payment 2" />
-      <img class="slide-img" src="p4.jpeg" alt="Payment 3" />
+    <!-- Payment Slider -->
+    <div class="slider payment-slider">
+      <img class="payment-img active" src="p2.jpeg" alt="Payment 1" />
+      <img class="payment-img" src="p3.jpeg" alt="Payment 2" />
+      <img class="payment-img" src="p4.jpeg" alt="Payment 3" />
       <div class="slider-buttons">
-        <button onclick="prevSlide('slide-img')">❮</button>
-        <button onclick="nextSlide('slide-img')">❯</button>
+        <button onclick="prevSlide('payment-img')">❮</button>
+        <button onclick="nextSlide('payment-img')">❯</button>
       </div>
     </div>
 
-    <div class="slider">
-      <img class="slide-img active" src="t1.jpeg" alt="Testimonial 1" />
-      <img class="slide-img" src="t2.jpeg" alt="Testimonial 2" />
-      <img class="slide-img" src="t3.jpeg" alt="Testimonial 3" />
+    <!-- Testimonial Slider -->
+    <div class="slider testimonial-slider">
+      <img class="testimonial-img active" src="t1.jpeg" alt="Testimonial 1" />
+      <img class="testimonial-img" src="t2.jpeg" alt="Testimonial 2" />
+      <img class="testimonial-img" src="t3.jpeg" alt="Testimonial 3" />
       <div class="slider-buttons">
-        <button onclick="prevSlide('slide-img')">❮</button>
-        <button onclick="nextSlide('slide-img')">❯</button>
+        <button onclick="prevSlide('testimonial-img')">❮</button>
+        <button onclick="nextSlide('testimonial-img')">❯</button>
       </div>
     </div>
 
@@ -253,22 +259,27 @@
   </a>
 
   <script>
-    let current = 0;
+    let slideIndexes = {
+      'payment-img': 0,
+      'testimonial-img': 0
+    };
+
     function nextSlide(className) {
       let slides = document.querySelectorAll(`.${className}`);
-      slides[current].classList.remove("active");
-      current = (current + 1) % slides.length;
-      slides[current].classList.add("active");
+      slides[slideIndexes[className]].classList.remove("active");
+      slideIndexes[className] = (slideIndexes[className] + 1) % slides.length;
+      slides[slideIndexes[className]].classList.add("active");
     }
 
     function prevSlide(className) {
       let slides = document.querySelectorAll(`.${className}`);
-      slides[current].classList.remove("active");
-      current = (current - 1 + slides.length) % slides.length;
-      slides[current].classList.add("active");
+      slides[slideIndexes[className]].classList.remove("active");
+      slideIndexes[className] = (slideIndexes[className] - 1 + slides.length) % slides.length;
+      slides[slideIndexes[className]].classList.add("active");
     }
 
-    setInterval(() => nextSlide('slide-img'), 4000);
+    setInterval(() => nextSlide('payment-img'), 4000);
+    setInterval(() => nextSlide('testimonial-img'), 5000);
   </script>
 
 </body>
