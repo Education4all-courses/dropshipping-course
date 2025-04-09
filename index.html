@@ -414,6 +414,34 @@
     };
     countdown();
   </script>
+<script>
+  let slideIndex = 0;
+
+  function showSlides(type) {
+    const sliders = document.querySelectorAll(`.slider`);
+    const selectedSlider = Array.from(sliders).find(slider => 
+      slider.querySelector('.slide-img.active')?.alt.toLowerCase().includes(type)
+    );
+
+    if (!selectedSlider) return;
+
+    const slides = selectedSlider.querySelectorAll(".slide-img");
+
+    slides.forEach(slide => slide.classList.remove("active"));
+    slideIndex = (slideIndex + slides.length) % slides.length;
+    slides[slideIndex].classList.add("active");
+  }
+
+  function nextSlide(type) {
+    slideIndex++;
+    showSlides(type);
+  }
+
+  function prevSlide(type) {
+    slideIndex--;
+    showSlides(type);
+  }
+</script>
 
 </body>
 </html>
